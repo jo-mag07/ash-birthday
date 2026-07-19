@@ -1,0 +1,383 @@
+/* ===========================================
+   Global
+=========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary: #BFA2FF;
+    --secondary: #FFD6E7;
+
+    --background1: #F9F4FF;
+    --background2: #FFF0F6;
+
+    --white: #FFFFFF;
+
+    --text: #3A3550;
+
+    --shadow: rgba(0, 0, 0, 0.12);
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--text);
+
+    background: linear-gradient(
+        135deg,
+        var(--background1),
+        var(--background2)
+    );
+
+    overflow: hidden;
+
+}
+
+/* ===========================================
+   Every Screen
+=========================================== */
+
+.screen {
+
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 30px;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+}
+
+.screen.active {
+
+    display: flex;
+
+}
+
+/* ===========================================
+   Titles
+=========================================== */
+
+h1 {
+
+    font-size: 2.4rem;
+
+    margin-bottom: 15px;
+
+}
+
+h2 {
+
+    font-size: 1.6rem;
+
+    margin-bottom: 10px;
+
+}
+
+h3 {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 10px;
+
+}
+
+p {
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+}
+
+/* ===========================================
+   Placeholder for Cats
+=========================================== */
+
+.cat-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+.cat-container img {
+
+    width: 180px;
+
+    max-width: 40vw;
+
+    transition: 
+        .4s ease;
+
+}
+
+
+/* Active speaker */
+
+.cat-speaking {
+
+    filter: brightness(1);
+
+    opacity: 1;
+
+    transform: scale(1.08);
+
+}
+
+
+/* Not speaking */
+
+.cat-not-speaking {
+
+    filter: grayscale(80%);
+
+    opacity: .45;
+
+    transform: scale(.95);
+
+}
+
+.cat-placeholder {
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.45);
+
+    border: 2px dashed #caa9ff;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: .9rem;
+
+    color: #777;
+
+}
+
+/* ===========================================
+   Dialogue Box
+=========================================== */
+
+.dialogue-box {
+
+    width: min(90%, 650px);
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px var(--shadow);
+
+    margin-bottom: 30px;
+
+}
+
+/* ===========================================
+   Letter Card
+=========================================== */
+
+.letter {
+
+    width: min(90%, 700px);
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+
+}
+
+#letterOneContent,
+#letterTwoContent {
+
+    margin-top:25px;
+
+    text-align:left;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+    font-size:1rem;
+
+}
+
+/* ===========================================
+   Input
+=========================================== */
+
+input {
+
+    width: min(90%, 420px);
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    border: 2px solid #d7c6ff;
+
+    outline: none;
+
+    font-size: 1rem;
+
+    margin: 20px 0;
+
+    transition: .3s;
+
+}
+
+input:focus{
+
+    border-color:var(--primary);
+
+}
+
+/* ===========================================
+   Buttons
+=========================================== */
+
+button {
+
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 14px;
+
+    background: var(--primary);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    margin: 8px;
+
+    transition: .3s;
+
+}
+
+button:hover{
+
+    transform: translateY(-3px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===========================================
+   Validation
+=========================================== */
+
+#validationMessage{
+
+    margin-top:20px;
+
+    font-weight:600;
+
+}
+
+/* ===========================================
+   Floating Decorations
+=========================================== */
+
+#floating-hearts,
+#floating-flowers{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/* ===========================================
+   Mobile
+=========================================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2rem;
+
+    }
+
+    h2{
+
+        font-size:1.4rem;
+
+    }
+
+    .cat-container{
+
+        flex-direction:row;
+
+    }
+
+    .cat-container img{
+
+        width:130px;
+
+    }
+
+    .dialogue-box{
+
+        padding:20px;
+
+    }
+
+    .letter{
+
+        padding:25px;
+
+    }
+
+}

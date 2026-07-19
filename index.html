@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise For Someone</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- JS -->
+    <script defer src="js/dialogue.js"></script>
+    <script defer src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- Floating Decorations -->
+    <!-- ========================================= -->
+
+    <div id="floating-hearts"></div>
+    <div id="floating-flowers"></div>
+
+    <!-- ========================================= -->
+    <!-- Loading Screen -->
+    <!-- ========================================= -->
+
+    <section id="loading" class="screen active">
+
+        <div class="loading-container">
+
+            <h1>🐾</h1>
+
+            <h2>Preparing today's little surprise...</h2>
+
+            <p>Please wait a moment.</p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- Cat Story -->
+    <!-- ========================================= -->
+
+    <section id="intro" class="screen">
+
+        <div class="cat-container">
+
+            <img
+                id="mochi"
+                src="assets/cats/images/mochi.png"
+                alt="Mochi">
+
+            <img
+                id="bean"
+                src="assets/cats/images/bean.png"
+                alt="Bean">
+
+        </div>
+
+        <div class="dialogue-box">
+
+            <h3 id="speaker">
+                Mochi
+            </h3>
+
+            <p id="dialogue">
+
+                Dialogue appears here.
+
+            </p>
+
+        </div>
+
+        <button id="nextDialogue">
+
+            Continue →
+
+        </button>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- Name Verification -->
+    <!-- ========================================= -->
+
+    <section id="nameScreen" class="screen">
+
+        <div class="dialogue-box">
+
+            <h3>Bean</h3>
+
+            <p>
+
+                Hmph.
+
+                If you're really the person we're waiting for...
+
+                Tell us your full name.
+
+            </p>
+
+        </div>
+
+        <input
+            id="nameInput"
+            type="text"
+            placeholder="Enter your full name">
+
+        <button id="verifyName">
+
+            I'm done!
+
+        </button>
+
+        <p id="validationMessage"></p>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- Cat Reveal -->
+    <!-- ========================================= -->
+
+    <section id="catReveal" class="screen">
+
+        <div class="cat-container">
+
+            <img
+                id="revealMochi"
+                src="assets/cats/images/mochi.png"
+                alt="Mochi">
+
+            <img
+                id="revealBean"
+                src="assets/cats/images/bean.png"
+                alt="Bean">
+
+        </div>
+
+        <div class="dialogue-box">
+
+            <h3 id="revealSpeaker">
+
+                Mochi
+
+            </h3>
+
+            <p id="revealDialogue">
+
+                ...
+
+            </p>
+
+        </div>
+
+        <button id="continueGift">
+
+            Open the Surprise 🎁
+
+        </button>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- Music -->
+    <!-- ========================================= -->
+
+    <section id="musicScreen" class="screen">
+
+        <h1>
+
+            🎵
+
+        </h1>
+
+        <h2>
+
+            Before we begin...
+
+        </h2>
+
+        <p>
+
+            Would you like some background music?
+
+        </p>
+
+        <button id="playMusic">
+
+            ▶ Play Music
+
+        </button>
+
+        <button id="skipMusic">
+
+            Skip
+
+        </button>
+
+    </section>
+
+    <!-- Audio -->
+
+    <audio
+        id="backgroundMusic"
+        loop>
+
+        <source
+            src="assets/audio/glue-song.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+    <!-- ========================================= -->
+    <!-- Birthday Letter -->
+    <!-- ========================================= -->
+
+<!-- ========================================= -->
+<!-- Letter 1 -->
+<!-- ========================================= -->
+
+<section id="letterOne" class="screen">
+
+    <div class="letter">
+
+        <h1>
+            Happy Birthday,
+            Ashley.
+        </h1>
+
+        <div id="letterOneContent">
+
+        </div>
+
+    </div>
+
+    <button id="toLetterTwo">
+
+        There's One More Thing... 🌸
+
+    </button>
+
+</section>
+
+<!-- ========================================= -->
+<!-- Letter 2 -->
+<!-- ========================================= -->
+
+<section id="letterTwo" class="screen">
+
+    <div class="letter">
+
+        <h1>
+
+            Before You Go...
+
+        </h1>
+
+        <div id="letterTwoContent">
+
+        </div>
+
+    </div>
+
+    <button id="finishGift">
+
+        Finish the Surprise 🎁
+
+    </button>
+
+</section>
+
+    <!-- ========================================= -->
+    <!-- Ending -->
+    <!-- ========================================= -->
+
+    <section id="ending" class="screen">
+
+        <h1>
+
+            🎉 Happy 19th Birthday! 🎉
+
+        </h1>
+
+        <h2>
+
+            Ashley Kyle Celoso
+
+        </h2>
+
+        <p>
+
+            Thank you for opening this little surprise.
+
+        </p>
+
+        <p>
+
+            Apologies, this is the only thing I can do for you this year...
+            
+            I hope you like it. I love you so much, and I wish you the best of luck in your future endeavors.
+            
+            May you always be happy and healthy, and may all your dreams come true. 💖
+
+        </p>
+
+        <button id="restart">
+
+            Visit Again 🌸
+
+        </button>
+
+    </section>
+
+</body>
+
+</html>
