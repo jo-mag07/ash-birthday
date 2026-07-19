@@ -42,7 +42,8 @@ body {
         var(--background2)
     );
 
-    overflow: hidden;
+overflow-x: hidden;
+overflow-y: auto;
 
 }
 
@@ -55,7 +56,7 @@ body {
     display: none;
 
     width: 100vw;
-    height: 100vh;
+min-height: 100vh;
 
     padding: 30px;
 
